@@ -1,0 +1,27 @@
+.nav-item {
+  position: absolute;
+  right: 15%;
+}
+
+.nav-link {
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.dropdown{
+  right: 5%;
+}
+
+.img-thumbnail img{
+  max-height: 150px;
+}
+.img-thumbnail {
+  position: relative;
+}
+
+.img-thumbnail .description {
+  color: #7f7f7f;
+}
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}
