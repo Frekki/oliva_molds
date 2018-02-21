@@ -12,7 +12,7 @@ const users = require('./routes/users');
 
 const app = express();
 
-mongoose.connect('localhost:27017/shop');
+mongoose.connect('mongodb://localhost:27017/shop');
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));

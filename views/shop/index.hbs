@@ -1,100 +1,19 @@
-<div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="img-thumbnail">
-            <img src="https://vignette.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142"
-                alt="..." class="img-responsive">
-            <div class="figure-caption">
-                <h3>Thumbnail label</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, illum facilis. Et ipsa magni, laudantium
-                    quas expedita architecto eum necessitatibus ipsum consequuntur earum voluptatibus voluptates dolore!
-                    Hic numquam error veritatis?</p>
-                <div class="clearfix">
-                    <div class="price float-left">$12</div>
-                    <a href="#" class="btn btn-success active float-right" role="button">Button</a>
+{{# each products }}
+    <div class="row">
+        {{# each this }}
+            <div class="col-sm-6 col-md-4">
+                <div class="img-thumbnail">
+                    <img src="{{ this.imagePath }}" alt="..." class="img-responsive">
+                    <div class="figure-caption">
+                        <h3>{{ this.title }}</h3>
+                        <p class="description">{{ this.description }}</p>
+                        <div class="clearfix">
+                            <div class="price float-left">${{ this.price }}</div>
+                            <a href="#" class="btn btn-success active float-right" role="button">Add to Shopping Cart</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            {{/each}}
     </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="img-thumbnail">
-            <img src="https://vignette.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142"
-                alt="..." class="img-responsive">
-            <div class="figure-caption">
-                <h3>Thumbnail label</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, illum facilis. Et ipsa magni, laudantium
-                    quas expedita architecto eum necessitatibus ipsum consequuntur earum voluptatibus voluptates dolore!
-                    Hic numquam error veritatis?</p>
-                <div class="clearfix">
-                    <div class="price float-left">$12</div>
-                    <a href="#" class="btn btn-success active float-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="img-thumbnail">
-            <img src="https://vignette.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142"
-                alt="..." class="img-responsive">
-            <div class="figure-caption">
-                <h3>Thumbnail label</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, illum facilis. Et ipsa magni, laudantium
-                    quas expedita architecto eum necessitatibus ipsum consequuntur earum voluptatibus voluptates dolore!
-                    Hic numquam error veritatis?</p>
-                <div class="clearfix">
-                    <div class="price float-left">$12</div>
-                    <a href="#" class="btn btn-success active float-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="img-thumbnail">
-            <img src="https://vignette.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142"
-                alt="..." class="img-responsive">
-            <div class="figure-caption">
-                <h3>Thumbnail label</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, illum facilis. Et ipsa magni, laudantium
-                    quas expedita architecto eum necessitatibus ipsum consequuntur earum voluptatibus voluptates dolore!
-                    Hic numquam error veritatis?</p>
-                <div class="clearfix">
-                    <div class="price float-left">$12</div>
-                    <a href="#" class="btn btn-success active float-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="img-thumbnail">
-            <img src="https://vignette.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142"
-                alt="..." class="img-responsive">
-            <div class="figure-caption">
-                <h3>Thumbnail label</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, illum facilis. Et ipsa magni, laudantium
-                    quas expedita architecto eum necessitatibus ipsum consequuntur earum voluptatibus voluptates dolore!
-                    Hic numquam error veritatis?</p>
-                <div class="clearfix">
-                    <div class="price float-left">$12</div>
-                    <a href="#" class="btn btn-success active float-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-        <div class="img-thumbnail">
-            <img src="https://vignette.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142"
-                alt="..." class="img-responsive">
-            <div class="figure-caption">
-                <h3>Thumbnail label</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, illum facilis. Et ipsa magni, laudantium
-                    quas expedita architecto eum necessitatibus ipsum consequuntur earum voluptatibus voluptates dolore!
-                    Hic numquam error veritatis?</p>
-                <div class="clearfix">
-                    <div class="price float-left">$12</div>
-                    <a href="#" class="btn btn-success active float-right" role="button">Button</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{/each}}
