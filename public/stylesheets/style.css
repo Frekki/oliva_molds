@@ -13,7 +13,9 @@
 
 .img-thumbnail img{
   max-height: 150px;
+  box-shadow: #7f7f7f;
 }
+
 .img-thumbnail {
   position: relative;
 }
@@ -21,7 +23,26 @@
 .img-thumbnail .description {
   color: #7f7f7f;
 }
+
 .price {
   font-weight: bold;
   font-size: 16px;
+}
+
+.row .img-thumbnail{
+  background: #ccd2c0;
+  
+  filter: drop-shadow(10px 10px 2px  #768858);
+}
+
+.row .col-sm-6{
+  padding: 15px 10px;
+}
+
+body {
+  background: #99a682;
+}
+
+.navbar {
+  background: #768858 !important;
 }
