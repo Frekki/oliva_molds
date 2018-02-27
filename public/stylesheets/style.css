@@ -30,8 +30,7 @@
 }
 
 .row .img-thumbnail{
-  background: #ccd2c0;
-  
+  background: #ccd2c0;  
   filter: drop-shadow(10px 10px 2px  #768858);
 }
 
@@ -45,4 +44,11 @@ body {
 
 .navbar {
   background: #768858 !important;
+}
+
+.label-success {
+  background: #768858;
+  box-shadow: 2px 2px 5px #7f7f7f;
+  border: 10px 10px 10px 10px;
+  color: white;
 }
