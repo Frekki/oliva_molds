@@ -52,3 +52,9 @@ body {
   border: 10px 10px 10px 10px;
   color: white;
 }
+
+.position-right {
+  display: inline-block;
+  position: fixed;
+  left: 65%;
+}
