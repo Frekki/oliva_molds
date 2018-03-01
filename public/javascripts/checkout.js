@@ -1,4 +1,4 @@
-Stripe.setPublishableKey('sk_test_wZD3o4rc734789O4ZPMubf3q');
+Stripe.setPublishableKey('pk_test_Ndp94eLd7ELwHqxsFXmWCSro');
 
 const $form = $('#checkout-form');
 
@@ -20,7 +20,7 @@ stripeResponseHandler = (status, response) => {
 
         // Show the errors on the form
         $('#charge-error').text(response.error.message);
-        $('#charge-error').removeClass('hidden');
+        $('#charge-error').removeClass('invisible');
         $form.find('button').prop('disabled', false); // Re-enable submission
 
     } else { // Token was created!

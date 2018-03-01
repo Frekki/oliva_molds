@@ -1,6 +1,8 @@
 .nav-item {
-  position: absolute;
-  right: 15%;
+  /* display: inline-block; */
+  position: fixed !important;
+  /* display: inline-block; */
+  right: 10%;
 }
 
 .nav-link {
@@ -8,7 +10,7 @@
 }
 
 .dropdown{
-  right: 5%;
+  right: 0%;
 }
 
 .img-thumbnail img{

@@ -6,6 +6,7 @@ const Product = require('../models/product');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  const successMsg = req.flash('success')[0];
   Product.find((err, docs) => {
     let productChunks = [];
     const chunkSize = 3;
@@ -14,7 +15,9 @@ router.get('/', function (req, res, next) {
     }
     res.render('shop/index', {
       title: 'Oliva Molds',
-      products: productChunks
+      products: productChunks,
+      successMsg: successMsg,
+      noMessages: !successMsg
     });
   });
 });
@@ -52,8 +55,37 @@ router.get('/checkout', (req, res, next) => {
     return res.redirect('/shopping-cart');
   }
   const cart = new Cart(req.session.cart);
+  let errMsg = req.flash('error')[0];
   res.render('shop/checkout', {
-    total: cart.totalPrice
+    total: cart.totalPrice,
+    errMsg: errMsg,
+    noError: !errMsg
+  });
+});
+
+router.post('/checkout', (req, res, next) => {
+  if (!req.session.cart) {
+    return res.redirect('/shopping-cart');
+  }
+  const cart = new Cart(req.session.cart);
+
+  const stripe = require("stripe")(
+    "sk_test_wZD3o4rc734789O4ZPMubf3q"
+  );
+
+  stripe.charges.create({
+    amount: cart.totalPrice * 100,
+    currency: "usd",
+    source: req.body.stripeToken,
+    description: "Test Charge"
+  }, (err, charge) => {
+    if (err) {
+      req.flash('error', err.message);
+      return res.redirect('/checkout');
+    }
+    req.flash('success', 'Successfully bought product!');
+    req.session.cart = null;
+    res.redirect('/');
   });
 });
 
